@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Picture This!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="title">
+      <h1>Picture This!</h1>
+      <h4>My Really Cool Blog Post</h4>   
+    </div>
+  </header>
+
+  <main>
+    <picture>
+   
+      <source srcset="images/img-square/museum_2400S.JPG"
+              media="(min-width: 1600px)" />
+
+      <source srcset="images/img-square/museum_1440S.JPG"
+              media="(min-width: 1280px)" />
+
+      <source srcset="images/img-square/museum_1280S.JPG"
+              media="(min-width: 960px)" />
+
+      <!-- Start accounting for high dpi options -->
+      <source srcset="images/img-landscape/museum-960L.JPG
+                          images/img-landscape/museum-1920L.JPG 2x,
+                          images/img-landscape/museum-2880L.JPG 3x"
+              media="(min-width: 720px)" />
+
+      <source srcset="images/img-landscape/museum-720L.JPG
+              images/img-landscape/museum-1440L.JPG 2x,
+              images/img-landscape/museum-2160L.JPG 3x"
+              media="(min-width: 480px)" />
+
+      <source srcset="images/img-landscape/museum-480L.JPG
+              images/img-landscape/museum-960L.JPG 2x,
+              images/img-landscape/museum-1440L.JPG 3x"
+              media="(min-width: 320px)" />
+
+      <source srcset="images/img-landscape/museum-320L.JPG
+              images/img-landscape/museum-640L.JPG 2x,
+              images/img-landscape/museum-960L.JPG 3x"
+              media="(max-width: 319px)" />
+
+      <!-- default image and container for sources -->
+      <img class="orig-img"
+           src="images/img-square/museum_2400S.JPG"
+           alt="Picture museum">      
+  </picture>
+
+   <!-- <img src="images/museum.jpg" alt="placeholder">  -->
+  </main>
+  
+</body>
+
+</html>
+
+   
