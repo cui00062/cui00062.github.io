@@ -1,0 +1,320 @@
+
+    /* CSS set from:
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*ending of CSS reset*/
+
+/* My assignment landing page starts from below, mobile view first. Here is the basic setting of p, h and body*/
+p{
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    color: black;
+    line-height: 1.5;
+ }
+ 
+ h1 {
+    font-size: 1.688rem;
+    font-weight: bold;
+    margin: 0 0 1.5rem 0;
+ }
+ 
+ h3 {
+    font-size: 12px;
+    margin: 0 0 1.5rem 0;
+
+    padding-top: 1rem;
+ }
+ h4 {
+    font-size: 12px;
+
+ }
+
+body {
+    margin: 1.5rem;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7ff;;
+    color: #333131;
+}
+
+/* images sizing, Also, Setting max-width will allow an img to be responsive below the max width and will stop it from expanding further to the max width */
+header img{
+
+	width:30%;
+}
+.scooter{
+	width:65%;
+	margin:0 auto;
+}
+
+
+/**************************************************************************************** 
+                             contact form 
+*****************************************************************************************/
+
+.contact-form {
+    text-align: left;
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 1rem auto;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    background-color: white;
+    border-radius: 26px;
+   } 
+      /*keep the checkbox inline with the text*/
+   input[type="checkbox"]{
+   width: auto;
+   display: inline-block;
+}
+   textarea,
+   input {
+       display: block;
+       margin: 0.5rem 0;
+       width: 100%;
+       padding: 10px;
+       font-size: 1rem;
+       background-color: lightgray;
+    box-sizing: border-box;
+    border-radius: 11px;
+    border:none
+   }
+
+  /*style the button*/
+
+.contact-form button{
+    background-color: #57EEAB;
+    margin: 1rem auto;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 10px;
+    border:none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+/*style the inline element, here is the color being red*/
+.app-status{color:red;}
+
+
+
+/****************************************************************************************
+                                       Footer styling
+*****************************************************************************************/
+
+footer{
+	margin-top:2rem;
+	background-color: #fffd8c;	
+    padding:2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    grid-gap: 5px;
+
+}
+.ben-p1 p{
+    font-weight: bold;
+}
+footer input{
+    background-color: white;
+    border:none;
+}
+ 
+/* use flexbox to style the footer **/
+
+.hours-city {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+#hours{
+	width:28%;
+	margin-right:2%;	
+}
+
+#city{
+	width:70%;
+}
+.footer button{
+    max-width: 100%;
+	background-color: #ff8480;
+}
+
+/*style the bottom input field*/
+.hours-city{
+    margin: 0 auto;
+    width: 100%;  
+}
+.hours-city input{
+    background-color: white;
+    border-radius: 10px;
+    border: none;   
+    margin: 0 auto;
+    display: inline-block;
+    padding-left: 10px;
+    width: auto;}
+
+.hours-city button {
+    background-color: #ff8480;
+    color: #f7f7ff;
+    font-size: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 11px;
+    width: 100%;
+    margin:0.5rem auto;
+    border:none;
+    }
+
+    .icon{
+    margin:1rem;
+    display:flex;
+    justify-content: space-around;
+    }
+
+.footer .icon{
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+/***mobile view end here**/
+
+/*************************************************************************************************
+    tablet view is not much difference for 375px, mainly layout for footer
+***************************************************************************************************/
+
+@media screen and (min-width:375px){
+    h1{font-size: 3rem;
+    }
+    header img{
+        width:40%;
+    }
+    .scooter{
+        width:75%;
+        margin:0 auto;
+    }
+    .benifit p{
+        font-size: 1.2rem;
+    }
+    h3{
+		font-size:1.2rem;
+	}
+    .contact-form{
+		margin: 1.2rem;
+	}
+    .hours-city {display:flex;
+		flex-wrap:nowrap;
+    }
+	#hours{
+        width: 24%;
+        margin-right: 2%; 	
+	}
+		
+	#city{
+        width: 35%;
+        margin-right: 2%; 
+    }
+    .hours-city button{
+	    width:35%;
+		margin-bottom: 10px;
+	}
+    
+	.icon{
+        display:flex;
+        margin: 0.5rem;
+		justify-content: center;
+    }
+}
+   /***end of tablet view here*/
+
+
+/****Desktop view****/
+/* Desktop Style Start */
+@media screen and (min-width:768px){
+	.container{
+		display: flex;
+		justify-content:space-between;
+		padding:0 auto;
+    }
+    
+    .main
+        {margin-left: 80px;
+    }
+	.scooter{
+		width: 100%;
+		margin: 200px auto 0;
+		padding:0 50px;
+    }
+
+	.contact-form {
+		margin-right:80px;
+		width: 70%;
+    }
+    
+	footer .benifit{
+        display: flex;
+        padding:50px 100px;
+        width: 50%;
+    }
+    h1{margin-top: 2rem;
+		font-size: 3rem;
+	}
+	.main p{
+		font-size:1.25rem;
+	}
+
+    footer .hours-city{
+		width:70%;
+	}
+	
+    .icon{
+		width: 50%;
+		justify-content: flex-end;
+	}
+}
+	
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Dash Landing Page </title>
+    <meta charset="utf-8">
+    <!-- 
+        The "viewport meta tag" is for the control the viewport's size and scale
+        The width property controls the size of the viewport. In this assignment project, the width are set to be 35rem, in between 35rem-80rem and great than 80rem.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="favicon.ico" rel="shortcut icon">
+     <!-- google font from the web-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700&display=swap" rel="stylesheet">
+                                
+</head>
+
+<!------  major conttents    ------>
+
+<body>
+    
+    <div class="container">
+        <div class="main">
+
+            <header>
+            <img src="images/logo/logo.png" alt="logo" width="50px"> 
+            </header>
+
+            <div class="motor-text"> 
+                <h1> Want to be your own boss?</h1>
+                <p> Start today and make up to $30/hr driving your own vehicle with Dash!</p>
+            </div>
+        </div>
+        
+            <div class="scooter"> 
+                <img src="images/bg-image/scooter.svg" alt="scooter">                             
+            </div>  
+      
+    <!-------------------- contact form ----------------------->
+
+        <div class="contact-form">
+                 
+                <caption>  
+                <h1> Apply Now </h1>
+                <h3>Enter your info below</h3>
+                </caption>
+
+                <fieldset>
+                <label for="first-name"></label>
+                <input type="text" name="name" id="first-name" placeholder="First name" maxlength="20">
+                </fieldset>
+
+                <fieldset>
+                <label for="last-name"></label>
+                <input type="text" name="last-name" id="last-name" placeholder="Last name" maxlength="20">
+                </fieldset>
+
+                <fieldset>
+                <label for="email"></label>
+                <input type="text" name="email" id="email" placeholder="Email address">
+       
+                </fieldset>
+
+                <fieldset>
+                <label for="phone-number"></label>
+                <input type="text" name="phone-number" id="phone-number" placeholder="Phone number">
+     
+                </fieldset>
+            
+                <fieldset>
+                <label for="spam">
+                <input type="checkbox" name="spam" id="spam" value="yes" checked>
+                I agree to the dash terms
+                </label>
+                </fieldset>                
+                <button> DRIVE WITH US </button>
+                    
+
+                <!---
+                <fieldset>
+                <label for="message"></label>
+                <textarea name="message" id="message" placeholder="DRIVE WITH US"></textarea>
+                </fieldset>--->
+               <!---using the span to style the inline element, here is the color being red, see CSS-->
+                <p>Already applied?<span class="app-status">Check your application status here.</span></p>
+                                   
+                <!--class form-notice end-->
+            </div>
+        </div>
+  <!---footer section-->
+        <footer>
+            <div class="benifit">
+                <div class="ben-p1">
+                    <p>See how much you can earn with Dash.</p>
+                </div>
+                <div class="ben-p2">
+                    <p>How many hours do you want drive with us with Dash?</p>  
+                </div>
+            </div>
+            <div class="hours-city">
+                <div class="fields">
+                    <input type="text" name="hours" id="hours" placeholder="Hours">
+                    <input type="text" name="city" id="city" placeholder="City">
+                    <button>CALCULATE</button> 
+                </div>
+            </div>
+            
+            <div class="icon"> 
+                <img src="images/icons/facebook.svg" alt="facebook"> 
+                <img src="images/icons/instagram.svg" alt="instagram"> 
+                <img src="images/icons/twitter.svg" alt="twitter"> 
+                <img src="images/icons/linkedin.svg" alt="linkedin">                
+            </div> 
+        </footer>
+    </div>
+
+    <!--end of class="container"-->
+
+</body>
+
+</html>

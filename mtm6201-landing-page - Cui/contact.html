@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Uji Café 宇治カフェ</title>
+  <meta charset="utf-8">
+  <!-- 
+        The "viewport meta tag" is for the control the viewport's size and scale
+        The width property controls the size of the viewport. 
+     -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+</head>
+
+<!--use my own photos in the body-->
+
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="banner">
+        <img src="img/main-banner.jpg" class="uji-team" alt="uji-team">
+        <h1 class="title"> Uji Café 宇治カフェ </h1>
+      </div>
+      <!--end of class "banner"-->
+
+      <!-- Navigation in its basic form is the list of links to other pages of the website, which helps users to navigate through my site. To give the links a semantical meaning, I use nav tag -->
+      <nav role="navigation">
+        <!-- since it is a list of links, an ul tag is used to set the structure, also li is a block level element and helps to display one anchor per line.  -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active"> Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- container including form and map ----------------------------------------------------------->
+    <div class="contact-f-map">
+      <!-----------         form          ----------->
+      <div class="contact-f">
+        <contact-form>
+          <!--import google font to the web-->
+          <!---  
+          <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+          -->
+      
+              <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Peter" maxlength="20">
+              </fieldset>
+        <!--    </div>    -->
+
+      <!--       <div class="containerE">  -->
+              <fieldset>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="peter@mail.com">
+       <!--      </div>    
+          </div>      -->
+          </fieldset>
+
+          <fieldset>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="A lot of fun to learn coding using Uji cafe as an example!"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <label for="spam">
+              Yes, please subscribe me to spam
+              <input type="checkbox" name="spam" id="spam" value="yes" checked>
+            </label>
+          </fieldset>
+
+          <button type="submit">Submit</button>
+        </contact-form>
+      </div>
+
+      <!-----------         map          ----------->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11201.26887632515!2d-75.6831329!3d45.4231064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x188a59c3622fdbae!2sUniversity%20of%20Ottawa!5e0!3m2!1sen!2sca!4v1576177072527!5m2!1sen!2sca"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+       
+      </div>
+    </div>
+    
+    <div>                
+        <h2> <a href="#top" class="top-btn" title="top"><i class="im im-angle-up"></i>
+                 </a></h2>
+    </div>
+
+    <nav role="navigation">
+        <!-- since it is a list of links, an ul tag is used to set the structure, also li is a block level element and helps to display one anchor per line. Since this is just the empty link for now, I use # for the corresponding html -->
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<!--------------------------------------------------------------------------------->
+    <footer class="footer">
+      Copyright &copy;, Yi Cui
+    </footer>
+  </div>
+  <!--end of class="container"-->
+
+</body>
+
+</html>
