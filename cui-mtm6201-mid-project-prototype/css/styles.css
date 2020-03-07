@@ -1,0 +1,646 @@
+    /* CSS set from:
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*ending of CSS reset*/
+
+/* My mid-prototype project starts from below, Here is the basic setting of font, body, p and h*/
+
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+/*make sure all boxes will not be out of the parent container*/
+*{
+  box-sizing: border-box;
+}
+
+body {
+    margin: 1rem;
+    padding: 10px;
+    font-family: Allura, 'Josefin Sans', sans-serif;
+    text-align: center;
+    background-color: rgb(40, 80, 120);
+    color: white;
+}
+
+p{
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    color: white;
+    line-height: 1.5;
+    /*text-indent: 1.5rem;*/
+ }
+ 
+ h1{
+    font-family: Allura, cursive;
+    font-size: 30px;
+    margin: 30px;
+    text-align: center;
+  }
+
+ h2 {
+    font-family: Allura, cursive;
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+ }
+
+
+
+/*** To create a container for each of webpage ***/
+
+.container {  
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+
+/************** Start of slide show ***************/
+
+/*slide show make site more appealing. */
+.container .slide{
+    overflow: hidden; /*The overflow property specifies what happens if content overflows an element's box.*/
+    position: relative;  
+}
+
+/* Keep the logo in the same position and also on top of the slide photos.*/
+.container .slide .slide-logo{
+    position: absolute;
+    width: 10%; /*logo size in slide*/
+    top: 40%;
+    left:8%;
+    z-index:1;/*logo on top of slide*/
+}
+ 
+/*Four photos slide show. The 1st photo is placed in the 5th position to function as smooth connection. As such, the total width of the banner will be five times of each photo. Therefore total 500% in width if each is designed 100%.*/
+
+.container .slide figure {
+    position: relative;
+    width:500%; /*total slide width for 5 photos*/
+    margin:0;
+    left:0;
+    animation:20s slider infinite; 
+    z-index:-1; /*make sure the logo is above the slide*/
+}
+
+/*Each slide accounts for 20% of 500%, meaning 100% width for each slide, The float property is used for positioning and formatting content. Here, let an image float left.*/
+.container .slide figure img {
+    width: 20%;
+    float: left;
+}
+
+/*animation for each slide is indicated */
+@keyframes slider{
+    0% {
+        left:0;
+    }    
+    20% {
+        left:0;/*4s*/
+    }
+    25% {
+        left:-100%;/*5s*/
+    }
+    45% {
+        left:-100%;/*9s*/
+    }
+    50% {
+        left:-200%;/*10s*/
+    }
+    70% {
+        left:-200%;/*14s*/
+    }
+    75% {
+        left:-300%;/*15s*/
+    }
+    95% {
+        left:-300%;/*19s*/
+    }
+    100% {
+        left:-400%;/*20s*/
+    }
+}
+
+/**************** End of Slide show *****************/
+
+
+/****************** Start of Gallery Animation ****************/
+
+
+/*style of each the gallery and make sure no overflow*/
+
+.gallery{
+    position: relative;
+    padding: 1rem 0;
+}
+  
+.gallery img{
+   /*Setting max-width will allow an element to be responsive below the max width */
+    max-width: 100%;
+    margin: 16px auto;
+    transition: transform 750ms;
+}
+
+/*make the photo expand 1.2 times of the original, i.e. 120% when hover on the photo*/
+.gallery figure:hover img{
+    transform: scale(1.2);
+}
+/************ End of Gallary Animation *************/
+
+
+
+/*************************************************************************************
+		                            Navigation
+**************************************************************************************/
+nav ul {
+	/* removing bullet points form the list items */
+	list-style-type: none;
+  /* removing indentation from the list items */
+  background-color:grey;
+	padding: 20px;
+  margin: 0;
+}
+
+
+nav ul li a {
+/* text for nav*/
+  text-decoration:none;
+  /*font-family: 'Allura', cursive;*/
+    color: white;
+    font-size: 20px;
+	  padding: 0.75rem;
+    display: block;  
+}
+
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+  /*Underline is used to show the hover display*/
+  background-color: rgb(2, 31, 39); 
+  color: white;
+	text-decoration: underline;
+}
+
+figcaption {
+  font-family: Allura, cursive;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/***************** End of Navigation ********************/
+   
+/****************** Start of Signin form ****************/
+
+.container .sub-container {
+    max-width: 640px;
+    width: 100%;
+    height: 425px;
+    margin: 80px auto;
+    box-shadow: 0 0 5px 2px rgba(231, 225, 225, 0.6);
+  }
+ 
+.login-form {
+    margin: 30px auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px 35px 0;
+    position: relative;
+  }
+  
+  .login-form .label {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height:25px;
+  }
+  
+  .login-form .input {
+    margin: 16px 0;
+    width: 100%;
+    padding: 12px;
+  }
+  
+  .login-form .forgot a {
+    color: rgb(197, 191, 191);
+    font-size: 18px;
+  }
+  
+  .login-form .btn {
+    margin: 35px auto;
+    width: 100%;
+    padding: 12px;
+    background: #4e1402;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+
+/******************* End of Signin form *******************/
+
+
+/****************** style of social media icon font ****************************************/
+
+.im-facebook:hover, .im-instagram:hover, .im-linkedin:hover, .im-youtube:hover, .im-wechat:hover{
+  background-color:deeppink;
+  transition: all 1s ease;
+  border-radius: 10px;
+  transform: translate(0, -1rem);/*make the icon change color in 1 second and move up when hover on it*/
+}
+
+
+.im-facebook, .im-instagram, .im-linkedin, .im-youtube, .im-wechat{
+  padding: 0.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/*Style of back to top*/
+.im-angle-up {
+  color: white; 
+}
+
+.im-angle-up:hover {
+  color: white;
+  transition: all 1s ease;
+  transform: translate(0, -1rem);
+}
+
+
+.footer {
+	background-color:grey;
+    padding: 1rem;
+    margin-top:0;
+    margin-bottom: 1rem;
+}
+
+
+/**********************************************************************************
+		                Content display in different screen size
+***********************************************************************************/
+
+@media screen and (min-width: 640px){
+    
+    /*nav links are in one demension arrange, so flex is chosen to display*/
+    nav ul {
+        display: flex;
+    }
+    nav ul li {
+        flex:1;
+    }
+
+    nav ul li a {
+
+        font-size: 1.5rem;
+        padding: 0.75rem;
+
+      }
+
+      /*make the gallery 4 rows and two columns*/
+       .gallery {
+         display: grid;
+         grid-template-rows: repeat(4, 1fr);
+         grid-template-columns: repeat(2, 1fr);
+         grid-gap: 10px;
+        margin: 3rem auto;
+       }
+
+       figcaption {
+        font-size: 1.2rem;
+      }
+  
+
+       .sub-container {
+        flex-direction: row;
+        min-width: 640px;
+        height: auto;
+        margin-top: 50px;
+      }
+  
+      .sub-container .login-form {
+        width: 640px;
+        padding: 5px 35px 0;
+      }
+  
+      .login-form .input {
+        margin-bottom: 18px;
+      }
+    
+      .login-form .forgot  {
+        margin-bottom:30px;
+      }
+}
+
+@media screen and (min-width: 960px){
+    .gallery {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      padding: 1rem 0;
+      grid-gap: 10px;
+    }
+
+    figcaption {
+      font-size: 1.5rem;
+    }
+
+    /*increase the size of social media icons*/
+    .im-facebook, .im-instagram, .im-linkedin, .im-youtub, .im-wechat{
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    }
+
+
+
+/****************************  start About ***********************************/
+
+/****     Start of about us from cell portview      *****/
+
+.yi {width: 100%;}/*As banner size*/
+
+.mission p{
+margin: 0 20%;/*make mission located in the center with 20% of margin horizontally*/
+}
+
+/*-------------- 
+	CSS Float 
+---------------*/
+.yi-intro {
+	/*float the image to make it sit next to the text*/
+	float: left;
+	width: 70%;
+  margin-right: 2rem;
+
+}
+.tipf-1{
+  	/*float the image to make it sit next to the text*/
+	/*float: left;*/
+	width: 44%;
+}
+
+.yi-with-judger-m{
+  /*float the image to make it sit next to the text*/
+/*float: right;*/
+width: 51%;
+}
+
+
+/************* Start Team section in About *************/
+.team-section{
+    margin-top: 5%;
+  }
+  
+  .team-section h1{
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  .team-section p{
+    color:rgb(40, 80, 120);
+    text-align:left;
+  }
+  
+  .team{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    flex-wrap: wrap; /*responsive to viewport size*/
+  }
+  
+  .team .team-member{
+    background:white;
+    margin: 10px;
+    margin-bottom: 50px;
+    width: 400px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;  
+    position: relative;
+    border-radius: 5%;
+  }
+  
+  .team .team-member h3{
+    color:#81c644;  
+    font-size: 26px;
+    margin-top: 50px;
+  }
+  
+  .team .team-member p.role{
+    color: rgb(40, 80, 120);
+    margin: 12px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  /*larrange the image at the center*/
+  .team .team-member .team-img{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .team .team-member .team-img img{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;/*make the images to be in circle*/
+  }
+
+@media screen and (min-width: 640px){
+  /*use flex to display and style the form in row*/
+  /*layout of about for the view size greater 640px*/
+
+.comments-awards {
+    display:flex;
+    justify-content: space-between;
+  }
+
+.comments {
+    flex-basis: 48%;
+    padding-top: 1rem;
+  }
+
+.awards {
+    flex-basis: 48%;
+    padding-top: 1rem;
+  }
+
+}
+/********************** End of About ***********************/
+
+
+/********************  Start of contact from cell portview  *********************/
+
+/*container for both form and map*/
+.contact-f-map {
+    margin: 3rem auto;
+    position: relative;
+}
+
+/*Style of contact form*/
+.contact-f {
+    text-align: left;
+    background-color: rgb(40,80,120);
+    font-size: 1rem;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 1px rgba(225, 225, 225, 0.6);
+    padding: 20px;
+    margin-bottom: 20px;
+   } 
+
+/*keep the checkbox inline with the text*/
+input[type="checkbox"]{
+   width: auto;
+   display: inline-block;}
+textarea,
+input {
+       display: block;
+       margin: 0.5rem 0;
+       width: 100%;
+       padding: 10px;
+       font-size: 1rem;
+       border: none;  
+       border-radius: 10px;
+       background: white;
+       border: none;
+   }
+   
+/*color change when clicking the textarea*/
+input:focus,
+textarea:focus {
+       outline-color: rgb(155, 224, 0);
+       border-color: rgb(155, 224, 0);
+   }
+
+button{
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        border: none;  
+        background: #4e1402;
+        color:white;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    /*Style of map*/
+.map {
+        position: relative;
+    }
+    
+.map iframe { 
+      width:100%; height: 350px; /*set the height to make the map look more balanced with the form*/     
+      border-radius: 10px;
+      overflow:hidden;
+  }
+    /*Set contact info style to make them responsive to the size*/  
+  .contact{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .phone{
+    margin-right: 4rem;
+  }
+
+  /*animation for contact info including color change and slow move up in 1s*/
+.phone:hover, .email:hover {
+  color: white;
+  background-color:deeppink;
+  transition: all 1s ease;
+  border-radius: 10px;
+  padding: 1rem;
+ 
+}
+
+/* layout for the view size greater 640px */
+@media screen and (min-width: 640px) {
+  /*use flex to display and style the form and map in row*/
+ .contact-f-map {
+    display:flex;
+    justify-content: space-between;
+  }
+ .contact-f {
+   flex-basis: 48%;
+   padding-top: 15px; 
+  }
+  
+ .map {
+   flex-basis: 48%;
+  }
+  .map iframe { 
+  width:100%; height: 95%; /*set the height as 95% to make the map have the same height with form*/
+
+}
+}
+/*************************** End of Contact ***************************/
+
+
+
