@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Portrait</title>
+    <meta charset="utf-8">
+    <!-- 
+        The "viewport meta tag" is for the control the viewport's size and scale
+        The width property controls the size of the viewport. In this final project, the width are under 35rem, in between 35rem-80rem and great than 80rem.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+
+</head>
+
+<!--use my own photos in the body-->
+
+<body>
+    <div class="container">
+        <!--------------------- start of class "slide" ----------------------->
+        <div class="slide">
+
+            <div>
+                <img src="img/logo/logo.png" class="slide-logo" alt="logo">
+            </div>
+
+            <!----------- optimization image size to correspond to viewport size ----->
+            <figure>
+
+                <source srcset="img/slide-and-banner/slide-1-1280w.jpg" media="(min-width: 1280px)" />
+                <source srcset="img/slide-and-banner/slide-1-960w.jpg" media="(min-width: 960px)" />
+                <source srcset="img/slide-and-banner/slide-1-640w.jpg" media="(max-width: 639px)" />
+
+                <source srcset="img/slide-and-banner/slide-2-1280w.jpg" media="(min-width: 1280px)" />
+                <source srcset="img/slide-and-banner/slide-2-960w.jpg" media="(min-width: 960px)" />
+                <source srcset="img/slide-and-banner/slide-2-640L.jpg" media="(max-width: 639px)" />
+
+                <source srcset="img/slide-and-banner/slide-3-1280w.jpg" media="(min-width: 1280px)" />
+                <source srcset="img/slide-and-banner/slide-3-960w.jpg" media="(min-width: 960px)" />
+                <source srcset="img/slide-and-banner/slide-3-640L.jpg" media="(max-width: 639px)" />
+
+                <source srcset="img/slide-and-banner/slide-4-1280w.jpg" media="(min-width: 1280px)" />
+                <source srcset="img/slide-and-banner/slide-4-960w.jpg" media="(min-width: 960px)" />
+                <source srcset="img/slide-and-banner/slide-4-640L.jpg" media="(max-width: 639px)" />
+
+                <source srcset="img/slide-and-banner/slide-1-1280w.jpg" media="(min-width: 1280px)" />
+                <source srcset="img/slide-and-banner/slide-1-960w.jpg" media="(min-width: 960px)" />
+                <source srcset="img/slide-and-banner/slide-1-640L.jpg" media="(max-width: 639px)" />
+
+                <img src="img/slide-and-banner/slide-1.jpg" class="slide" alt="portrait">
+                <img src="img/slide-and-banner/slide-2.jpg" class="slide" alt="portrait">
+                <img src="img/slide-and-banner/slide-3.jpg" class="slide" alt="portrait">
+                <img src="img/slide-and-banner/slide-4.jpg" class="slide" alt="portrait">
+                <img src="img/slide-and-banner/slide-1.jpg" class="slide" alt="portrait">
+
+            </figure>
+
+        </div>
+
+        <!-- end of class "slide" -->
+
+        <h1> Featured Photos </h1>
+
+        <!---------------- start of navigation -------------------->
+        <!-- Navigation in its basic form is the list of links to other pages of the website, 
+                which helps users to navigate through my sites. 
+                To give the links a semantical meaning, I use nav tag -->
+        <nav role="navigation">
+            <!-- since it is a list of links, an ul tag is used to set the structure, also li is a block level element and helps to display one anchor per line.  logo is for branding -->
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- end of navigation -->
+
+        <!---------------- start of gallery -------------------->
+        <div class="gallery">
+
+            <figure>
+                <img src="img/gallery-h/airshow-640w.jpg" alt="event-h">
+                <figcaption> Event</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/soccor-640w.jpg" alt="sport-h">
+                <figcaption>Sport</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/dancer.jpg" alt="show-h">
+                <figcaption>Show</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/street-1.jpg" alt="people-h">
+                <figcaption>People</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/abs-640w.jpg" alt="abstract-h">
+                <figcaption>Abstract</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/puffin-640w.jpg" alt="bird-h">
+                <figcaption>Bird</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/xinyi-boat-640w.jpg" alt="landscape-h">
+                <figcaption>Landscape</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/model-640w.jpg" alt="portrait-h">
+                <figcaption>Portrait</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/matcha.jpg" alt="food-h">
+                <figcaption>Food</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/glass.jpg" alt="still-h">
+                <figcaption>Still</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/night-wz.jpg" alt="night-h">
+                <figcaption>Night</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/gallery-h/dubai.jpg" alt="urban-h">
+                <figcaption>Urban</figcaption>
+            </figure>
+
+        </div>
+        <!-- end of gallery -->
+
+        <!------------------- Start of signin form  ------------------->
+
+        <div class="sub-container">
+            <div class="login-form">
+
+                <h1> Let's get in touch</h1>
+
+                <div class="input-fields">
+                    <label class="label">Username</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input-fields">
+                    <label class="label">Password</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="btn">
+                    login
+                </div>
+            </div>
+        </div>
+        <!-- end of signin form -->
+
+
+        <!--------------- start of social media icons -------------------->
+        <div class="icon">
+            <a href="http://www.facebook.com"> <i class="im im-facebook"></i> </a>
+            <a href="http://www.instagram.com"> <i class="im im-instagram"></i> </a>
+            <a href="http://www.linkedin.com"> <i class="im im-linkedin"></i> </a>
+            <a href="http://www.youtube.com"> <i class="im im-youtube"></i> </a>
+            <a href="http://www.wechat.com"> <i class="im im-wechat"></i> </a>
+        </div>
+        <!-- end of social media icons -->
+
+        <!--------------- start of back to top using "back to top" icon -------------------->
+        <div>
+            <h2> <a href="#top" class="top-btn" title="top"><i class="im im-angle-up"></i>
+                </a> </h2>
+        </div>
+        <!-- end of "back to top" icon -->
+
+        <!---------------------- start of footer navigation --------------------->
+        <nav role="navigation">
+            <!-- since it is a list of links, an ul tag is used to set the structure, also li is a block level element and helps to display one anchor per line. Since this is just the empty link for now, I use # for the corresponding html, logo is just for branding -->
+            <ul>
+                <!-- logo is for branding -->
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <footer class="footer">
+
+            Copyright &copy; Yi photography, All Photo Rights Reserved, 2020.
+        </footer>
+    </div>
+    <!--end of class="container"-->
+
+</body>
+
+</html>
